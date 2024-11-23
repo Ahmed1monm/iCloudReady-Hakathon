@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import path from "path";
 import helmet from "helmet";
 import nodeCron from "node-cron";
+import cors from "cors";
 
 import CreateConnection from "./models";
 import {mongoURI, PORT} from "./config";
@@ -16,6 +17,7 @@ const marketing = express();
 dotenv.config();
 
 // middlewares
+marketing.use(cors());
 marketing.use(express.json());
 marketing.use(helmet());
 marketing.use(helmet.crossOriginResourcePolicy({policy: "cross-origin"}));
