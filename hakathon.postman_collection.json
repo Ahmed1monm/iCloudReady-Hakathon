@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "24dcf798-2f4e-4175-8b6c-c062e24d3095",
+		"name": "hakathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25042739"
+	},
+	"item": [
+		{
+			"name": "create campaign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"sdsdsd Sale Campaign\",\n    \"startDate\": \"2024-11-25T00:00:00.000Z\",\n    \"endDate\": \"2024-12-10T23:59:59.000Z\",\n    \"budget\": 5000,\n    \"channels\": [\n        {\n            \"name\": \"Facebook Ads\",\n            \"account\": [\n                {\n                    \"token\": {\n                        \"access_token\": \"abc123xyz\",\n                        \"token_type\": \"Bearer\",\n                        \"refresh_token\": \"refresh123xyz\",\n                        \"expires_in\": 3600\n                    },\n                    \"name\": \"Main Facebook Account\",\n                    \"id\": \"fb_001\",\n                    \"isDefault\": true\n                }\n            ]\n        },\n        {\n            \"name\": \"Google Ads\",\n            \"account\": [\n                {\n                    \"token\": {\n                        \"access_token\": \"google_access_456\",\n                        \"token_type\": \"Bearer\",\n                        \"refresh_token\": \"google_refresh_456\",\n                        \"expires_in\": 3600\n                    },\n                    \"name\": \"Main Google Account\",\n                    \"id\": \"google_002\",\n                    \"isDefault\": true\n                }\n            ]\n        }\n    ],\n    \"targetAudience\": [\n        {\n            \"name\": \"Young Professionals\",\n            \"description\": \"Targeting professionals aged 25-35 in urban areas.\",\n            \"ageRange\": \"25-35\",\n            \"address\": \"Urban Areas\",\n            \"job\": \"Professional\"\n        },\n        {\n            \"name\": \"Retirees\",\n            \"description\": \"Targeting individuals aged 60+ in suburban and rural areas.\",\n            \"ageRange\": \"60+\",\n            \"address\": \"Suburban and Rural Areas\",\n            \"job\": \"Retired\"\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/campaign",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"campaign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get leads of a campaign",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"sdsdsd Sale Campaign\",\n    \"startDate\": \"2024-11-25T00:00:00.000Z\",\n    \"endDate\": \"2024-12-10T23:59:59.000Z\",\n    \"budget\": 5000,\n    \"channels\": [\n        {\n            \"name\": \"Facebook Ads\",\n            \"account\": [\n                {\n                    \"token\": {\n                        \"access_token\": \"abc123xyz\",\n                        \"token_type\": \"Bearer\",\n                        \"refresh_token\": \"refresh123xyz\",\n                        \"expires_in\": 3600\n                    },\n                    \"name\": \"Main Facebook Account\",\n                    \"id\": \"fb_001\",\n                    \"isDefault\": true\n                }\n            ]\n        },\n        {\n            \"name\": \"Google Ads\",\n            \"account\": [\n                {\n                    \"token\": {\n                        \"access_token\": \"google_access_456\",\n                        \"token_type\": \"Bearer\",\n                        \"refresh_token\": \"google_refresh_456\",\n                        \"expires_in\": 3600\n                    },\n                    \"name\": \"Main Google Account\",\n                    \"id\": \"google_002\",\n                    \"isDefault\": true\n                }\n            ]\n        }\n    ],\n    \"targetAudience\": [\n        {\n            \"name\": \"Young Professionals\",\n            \"description\": \"Targeting professionals aged 25-35 in urban areas.\",\n            \"ageRange\": \"25-35\",\n            \"address\": \"Urban Areas\",\n            \"job\": \"Professional\"\n        },\n        {\n            \"name\": \"Retirees\",\n            \"description\": \"Targeting individuals aged 60+ in suburban and rural areas.\",\n            \"ageRange\": \"60+\",\n            \"address\": \"Suburban and Rural Areas\",\n            \"job\": \"Retired\"\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/campaign/6741de9d271e4766f38fbdfc/leads",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"campaign",
+						"6741de9d271e4766f38fbdfc",
+						"leads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"sdsdsd Sale Campaign\",\n    \"startDate\": \"2024-11-25T00:00:00.000Z\",\n    \"endDate\": \"2024-12-10T23:59:59.000Z\",\n    \"budget\": 5000,\n    \"channels\": [\n        {\n            \"name\": \"Facebook Ads\",\n            \"account\": [\n                {\n                    \"token\": {\n                        \"access_token\": \"abc123xyz\",\n                        \"token_type\": \"Bearer\",\n                        \"refresh_token\": \"refresh123xyz\",\n                        \"expires_in\": 3600\n                    },\n                    \"name\": \"Main Facebook Account\",\n                    \"id\": \"fb_001\",\n                    \"isDefault\": true\n                }\n            ]\n        },\n        {\n            \"name\": \"Google Ads\",\n            \"account\": [\n                {\n                    \"token\": {\n                        \"access_token\": \"google_access_456\",\n                        \"token_type\": \"Bearer\",\n                        \"refresh_token\": \"google_refresh_456\",\n                        \"expires_in\": 3600\n                    },\n                    \"name\": \"Main Google Account\",\n                    \"id\": \"google_002\",\n                    \"isDefault\": true\n                }\n            ]\n        }\n    ],\n    \"targetAudience\": [\n        {\n            \"name\": \"Young Professionals\",\n            \"description\": \"Targeting professionals aged 25-35 in urban areas.\",\n            \"ageRange\": \"25-35\",\n            \"address\": \"Urban Areas\",\n            \"job\": \"Professional\"\n        },\n        {\n            \"name\": \"Retirees\",\n            \"description\": \"Targeting individuals aged 60+ in suburban and rural areas.\",\n            \"ageRange\": \"60+\",\n            \"address\": \"Suburban and Rural Areas\",\n            \"job\": \"Retired\"\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/dashboard",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "additional input",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"sdsdsd Sale Campaign\",\n    \"startDate\": \"2024-11-25T00:00:00.000Z\",\n    \"endDate\": \"2024-12-10T23:59:59.000Z\",\n    \"budget\": 5000,\n    \"channels\": [\n        {\n            \"name\": \"Facebook Ads\",\n            \"account\": [\n                {\n                    \"token\": {\n                        \"access_token\": \"abc123xyz\",\n                        \"token_type\": \"Bearer\",\n                        \"refresh_token\": \"refresh123xyz\",\n                        \"expires_in\": 3600\n                    },\n                    \"name\": \"Main Facebook Account\",\n                    \"id\": \"fb_001\",\n                    \"isDefault\": true\n                }\n            ]\n        },\n        {\n            \"name\": \"Google Ads\",\n            \"account\": [\n                {\n                    \"token\": {\n                        \"access_token\": \"google_access_456\",\n                        \"token_type\": \"Bearer\",\n                        \"refresh_token\": \"google_refresh_456\",\n                        \"expires_in\": 3600\n                    },\n                    \"name\": \"Main Google Account\",\n                    \"id\": \"google_002\",\n                    \"isDefault\": true\n                }\n            ]\n        }\n    ],\n    \"targetAudience\": [\n        {\n            \"name\": \"Young Professionals\",\n            \"description\": \"Targeting professionals aged 25-35 in urban areas.\",\n            \"ageRange\": \"25-35\",\n            \"address\": \"Urban Areas\",\n            \"job\": \"Professional\"\n        },\n        {\n            \"name\": \"Retirees\",\n            \"description\": \"Targeting individuals aged 60+ in suburban and rural areas.\",\n            \"ageRange\": \"60+\",\n            \"address\": \"Suburban and Rural Areas\",\n            \"job\": \"Retired\"\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/additional-inputs",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"additional-inputs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
