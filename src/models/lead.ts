@@ -13,13 +13,13 @@ const leadSchema = new mongoose.Schema({
     score: {type: Number, default: 0}
 }, {timestamps: true});
 
-leadSchema.pre("find", function () {
-    this.populate("campaign");
-});
-
-leadSchema.pre("findOne", function () {
-    this.populate("campaign");
-});
+// leadSchema.pre("find", function () {
+//     this.populate("campaign");
+// });
+//
+// leadSchema.pre("findOne", function () {
+//     this.populate("campaign");
+// });
 
 const LeadModel = mongoose.model("Lead", leadSchema);
 export {
